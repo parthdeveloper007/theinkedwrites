@@ -1,0 +1,113 @@
+<!Doctype html>
+<html>
+<head>
+<title>Ink | The Inked Writes</title>
+<link href="css/stylesheet.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <a class="title navbar-brand" href="#"><font size="1px">the</font><br>INKED<br>WRITES</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link simple-text" href="">Inks</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link simple-text" target="_blank" href="https://www.theinkedwrites.com/">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link simple-text" target="_blank" href="https://www.instagram.com/theinkedwrites/">Instagram</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link simple-text" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfCAZPe3QJ4RTpaUroqUwx2ZdRlKkSnJpxUrl4aCQkwy1ZCIg/viewform?c=0&w=1">Submit</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link simple-text" href="#">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="centered">
+	<div class="margins">
+  <div id="quote" class="quotetext"></div>
+  <div id="author" class="author"></div>
+  </div>
+  <div class="boxContainer">
+  <button class="button" style="vertical-align:middle" onclick="location.href='all.html';"><span>View all</span></button>
+  <button class="button" style="vertical-align:middle" onclick="myFunction()"><span>Next </span></button>
+</div>
+  </div>
+    <div class="footer-main">
+   © Ravrani Software Developers<br>The Inked Writes 2018
+    </div>
+	<p id="demo"></p>
+
+<script>
+var obj, random, dbParam, xmlhttp, myObj, x, txt = "";
+dbParam = JSON.stringify(0);
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText);
+        txt += ""
+        for (x in myObj) {
+        	random = Math.floor(Math.random()* (myObj.length));
+            txt = "" + myObj[random].body + "";
+			if(myObj[random].author_id == 1){
+				auth = "Abraham H. Maslow | the inked writes"
+			}
+			else {
+				auth = "the inked writes"
+			}
+        }
+        txt += ""        
+        document.getElementById("quote").innerHTML = txt;
+        document.getElementById("author").innerHTML = auth;
+    }
+};
+xmlhttp.open("GET", "https://raw.githubusercontent.com/parthravrani/parthravrani.github.io/master/realityoflife/quote.json", true);
+xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xmlhttp.send("x=" + dbParam);
+</script>
+<script>
+function myFunction() {
+    var obj, random, dbParam, xmlhttp, myObj, x, txt = "";
+dbParam = JSON.stringify(0);
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText);
+        txt += ""
+        for (x in myObj) {
+        	random = Math.floor(Math.random()* (myObj.length));
+            txt = "" + myObj[random].body + "";
+			if(myObj[random].author_id == 1){
+				auth = "Abraham H. Maslow | the inked writes"
+			}
+			else {
+				auth = "the inked writes"
+			}
+        }
+        txt += ""        
+        document.getElementById("quote").innerHTML = txt;
+        document.getElementById("author").innerHTML = auth;
+    }
+};
+xmlhttp.open("GET", "https://raw.githubusercontent.com/parthravrani/parthravrani.github.io/master/realityoflife/quote.json", true);
+xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xmlhttp.send("x=" + dbParam);
+}
+</script>
+</body>
+</html>
