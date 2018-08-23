@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Ink | The Inked Writes</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 <link href="css/stylesheet.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,7 @@
 </head>
 <body>
 	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
-  <a class="title navbar-brand" href="#"><font size="1px">the</font><br>INKED<br>WRITES</a>
+  <a class="title navbar-brand" href=""><font size="1px">the</font><br>INKED<br>WRITES</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -20,7 +21,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link simple-text" href="">Inks</a>
+        <a class="nav-link simple-text" href="">Inks <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link simple-text" target="_blank" href="https://www.theinkedwrites.com/">Blog</a>
@@ -35,6 +36,17 @@
         <a class="nav-link simple-text" href="#">Contact</a>
       </li>
     </ul>
+
+<ul class="navbar-nav ml-auto">
+ <li class="active nav-item">
+                    <a href="https://twitter.com/theinkedwrites" target="_blank" class="nav-link"><i class="fab fa-twitter fa-lg"></i></a>
+                </li><li class="active nav-item">
+                    <a href="https://www.facebook.com/theinkedwrites" target="_blank" class="nav-link"><i class="fab fa-facebook-square fa-lg"></i></a>
+                </li><li class="active nav-item">
+                    <a href="https://www.instagram.com/theinkedwrites/" target="_blank" class="nav-link"><i class="fab fa-instagram fa-lg"></i></a>
+                </li>
+            </ul>
+
   </div>
 </nav>
 
@@ -48,10 +60,13 @@
   <button class="button" style="vertical-align:middle" onclick="myFunction()"><span>Next </span></button>
 </div>
   </div>
-    <div class="footer-main">
-   © Ravrani Software Developers - The Inked Writes 2018
+    <footer class="footer-main">
+      <div class="center-block" style="text-align:  center;background:  #007bff;color: white;padding: 5px;">
+      <font size="5px;">The Inked Writes</font><br>
+      <!-- <font class="tag-line">--   People with Heart of gold never rusts --</font><br>       -->
+      © Ravrani Software Developers - The Inked Writes 2018
     </div>
-	<p id="demo"></p>
+    </footer>
 
 <script>
 var obj, random, dbParam, xmlhttp, myObj, x, txt = "";
@@ -68,7 +83,7 @@ xmlhttp.onreadystatechange = function() {
 				auth = "Abraham H. Maslow | the inked writes"
 			}
 			else {
-				auth = "the inked writes"
+				auth = "@parth_ravrani | the inked writes"
 			}
         }
         txt += ""        
@@ -96,7 +111,7 @@ xmlhttp.onreadystatechange = function() {
 				auth = "Abraham H. Maslow | the inked writes"
 			}
 			else {
-				auth = "the inked writes"
+        auth = "@parth_ravrani | the inked writes"
 			}
         }
         txt += ""        
