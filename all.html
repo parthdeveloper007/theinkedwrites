@@ -67,7 +67,7 @@
   </div>
      <footer class="footer">
       <div class="center-block" style="text-align:  center;background:  #007bff;color: white;padding: 5px;">
-      <font size="5px;">The Inked Writes</font><br>
+      <!-- <font size="5px;">The Inked Writes</font><br> -->
       <!-- <font class="tag-line">--   People with Heart of gold never rusts --</font><br>       -->
       © Ravrani Software Developers - The Inked Writes 2018
     </div>
@@ -83,7 +83,7 @@ xmlhttp.onreadystatechange = function() {
         myObj = JSON.parse(this.responseText);
         txt += ""
         for (x in myObj) {
-            txt += "<div class='col-sm-6 mb-3'><div class='card'><div class='card-body'><h5 class='card-subtitle mb-2 text-muted'>@parthravrani</h5><p class='card-text'>"+myObj[x].body+"</p><a href='#' class='btn btn-outline-primary btn-sm'>View on Instagram</a></div></div></div>"
+            txt += "<div class='col-sm-6 mb-3'><div class='card'><div class='card-body'><h5 class='card-subtitle mb-2 text-muted'>@parthravrani</h5><p class='card-text'>"+myObj[x].body+"</p><a href='#' class='btn btn-primary btn-sm'>View on Instagram</a></div></div></div>"
         }
         txt += ""        
         document.getElementById("quote").innerHTML = txt;
