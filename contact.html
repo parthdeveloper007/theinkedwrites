@@ -12,8 +12,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div class="main">
 	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
-  <a class="title navbar-brand" href="#"><font size="1px">the</font><br>INKED<br>WRITES</a>
+  <a class="title navbar-brand" href=""><!-- <font size="1px">the</font><br>INKED<br>WRITES -->The Inked Writes</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -21,10 +22,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link simple-text" href="index.html">Inks</a>
+        <a class="nav-link simple-text" href="">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link simple-text" target="_blank" href="https://www.theinkedwrites.com/">Blog</a>
+        <a class="nav-link simple-text" target="_blank" href="https://blog.theinkedwrites.com/">Blog</a>
       </li>
       <li class="nav-item">
         <a class="nav-link simple-text" target="_blank" href="https://www.instagram.com/theinkedwrites/">Instagram</a>
@@ -32,14 +33,13 @@
       <li class="nav-item">
         <a class="nav-link simple-text" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfCAZPe3QJ4RTpaUroqUwx2ZdRlKkSnJpxUrl4aCQkwy1ZCIg/viewform?c=0&w=1">Submit</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link simple-text" href="#">Contact</a>
       </li>
     </ul>
 
-
 <ul class="navbar-nav ml-auto">
-  <li class="active nav-item">
+ <li class="active nav-item">
                     <a href="https://twitter.com/theinkedwrites" target="_blank" class="nav-link"><i class="fab fa-twitter fa-lg"></i></a>
                 </li><li class="active nav-item">
                     <a href="https://www.facebook.com/theinkedwrites" target="_blank" class="nav-link"><i class="fab fa-facebook-square fa-lg"></i></a>
@@ -48,51 +48,33 @@
                 </li>
             </ul>
 
-
   </div>
 </nav>
 
-<div class="simple-text container">
-  
-<div class="margins row m-3" id="quote">
+<div class="centered">
+	<div class="margins">
+    <div class="head-lines">#poets #writers</div>
+  <div id="quote" class="quotetext">The Inked Writes</div>
+  <div id="author" class="author" style="line-height: 0px;">People with the heart of gold never rusts</div>
+  <br><br>
 
+  <a href="https://twitter.com/theinkedwrites" target="_blank" class="nav-link"><i class="fab fa-twitter fa-lg"></i></a>
 
-  <!-- Main Container Quotes all -->
+  <a href="https://twitter.com/theinkedwrites" target="_blank" class="nav-link"><i class="fab fa-twitter fa-lg"></i></a>
 
-
-</div>
-
-</div>
-
+  <a href="https://twitter.com/theinkedwrites" target="_blank" class="nav-link"><i class="fab fa-twitter fa-lg"></i></a>
   </div>
-     <footer class="footer">
+  <div class="boxContainer">
+  <!-- <button class="button" style="vertical-align:middle" onclick="location.href='all.html';"><span>View all</span></button> -->
+  
+</div>
+  </div>
+  </div>
+    <footer class="footer-main">
       <div class="center-block" style="text-align:  center;background:  #007bff;color: white;padding: 5px;">
-      <!-- <font size="5px;">The Inked Writes</font><br> -->
       <!-- <font class="tag-line">--   People with Heart of gold never rusts --</font><br>       -->
       © Ravrani Software Developers - The Inked Writes 2018
     </div>
     </footer>
-
-<script>
-
-var obj, random, dbParam, xmlhttp, myObj, x, txt = "";
-dbParam = JSON.stringify(0);
-xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        myObj = JSON.parse(this.responseText);
-        txt += ""
-        for (x in myObj) {
-            txt += "<div class='col-sm-6 mb-3'><div class='card'><div class='card-body'><h5 class='card-subtitle mb-2 text-muted'>@parthravrani</h5><p class='card-text'>"+myObj[x].body+"</p><a href='#' class='btn btn-primary btn-sm'>View on Instagram</a></div></div></div>"
-        }
-        txt += ""        
-        document.getElementById("quote").innerHTML = txt;
-    }
-};
-xmlhttp.open("GET", "https://raw.githubusercontent.com/parthravrani/parthravrani.github.io/master/realityoflife/quote.json", true);
-xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-xmlhttp.send("x=" + dbParam);
-
-</script>
 </body>
 </html>

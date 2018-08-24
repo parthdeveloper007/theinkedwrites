@@ -14,7 +14,7 @@
 <body>
   <div class="main">
 	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
-  <a class="title navbar-brand" href=""><font size="1px">the</font><br>INKED<br>WRITES</a>
+  <a class="title navbar-brand" href=""><!-- <font size="1px">the</font><br>INKED<br>WRITES -->The Inked Writes</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -22,10 +22,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link simple-text" href="">Inks <span class="sr-only">(current)</span></a>
+        <a class="nav-link simple-text" href="">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link simple-text" target="_blank" href="http://blog.theinkedwrites.com/">Blog</a>
+        <a class="nav-link simple-text" target="_blank" href="https://blog.theinkedwrites.com/">Blog</a>
       </li>
       <li class="nav-item">
         <a class="nav-link simple-text" target="_blank" href="https://www.instagram.com/theinkedwrites/">Instagram</a>
@@ -33,9 +33,9 @@
       <li class="nav-item">
         <a class="nav-link simple-text" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfCAZPe3QJ4RTpaUroqUwx2ZdRlKkSnJpxUrl4aCQkwy1ZCIg/viewform?c=0&w=1">Submit</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link simple-text" href="#">Contact</a>
-      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link simple-text" href="contact.html">Contact</a>
+      </li> -->
     </ul>
 
 <ul class="navbar-nav ml-auto">
@@ -53,11 +53,12 @@
 
 <div class="centered">
 	<div class="margins">
+    <div class="head-lines">#featured #top10</div>
   <div id="quote" class="quotetext"></div>
   <div id="author" class="author"></div>
   </div>
   <div class="boxContainer">
-  <button class="button" style="vertical-align:middle" onclick="location.href='all.html';"><span>View all</span></button>
+  <!-- <button class="button" style="vertical-align:middle" onclick="location.href='all.html';"><span>View all</span></button> -->
   <button class="button" style="vertical-align:middle" onclick="myFunction()"><span>Next </span></button>
 </div>
   </div>
@@ -79,20 +80,15 @@ xmlhttp.onreadystatechange = function() {
         txt += ""
         for (x in myObj) {
         	random = Math.floor(Math.random()* (myObj.length));
-            txt = "" + myObj[random].body + "";
-			if(myObj[random].author_id == 1){
-				auth = "Abraham H. Maslow | the inked writes"
-			}
-			else {
-				auth = "@parth_ravrani | the inked writes"
-			}
+            txt = "" + myObj[random].ink + "";
+        		auth = "<a style='text-decoration: none; color: black;' target='_blank' href='"+ myObj[random].writer_link + "'>@" + myObj[random].writer + "</a> | the inked writes";
         }
         txt += ""        
         document.getElementById("quote").innerHTML = txt;
         document.getElementById("author").innerHTML = auth;
     }
 };
-xmlhttp.open("GET", "https://raw.githubusercontent.com/parthravrani/parthravrani.github.io/master/realityoflife/quote.json", true);
+xmlhttp.open("GET", "https://raw.githubusercontent.com/parthdeveloper007/theinkedwrites/gh-pages/top-quote.json", true);
 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xmlhttp.send("x=" + dbParam);
 </script>
@@ -106,21 +102,16 @@ xmlhttp.onreadystatechange = function() {
         myObj = JSON.parse(this.responseText);
         txt += ""
         for (x in myObj) {
-        	random = Math.floor(Math.random()* (myObj.length));
-            txt = "" + myObj[random].body + "";
-			if(myObj[random].author_id == 1){
-				auth = "Abraham H. Maslow | the inked writes"
-			}
-			else {
-        auth = "@parth_ravrani | the inked writes"
-			}
+          random = Math.floor(Math.random()* (myObj.length));
+            txt = "" + myObj[random].ink + "";
+            auth = "<a style='text-decoration: none; color: black;' target='_blank' href='"+ myObj[random].writer_link + "'>@" + myObj[random].writer + "</a> | the inked writes";
         }
         txt += ""        
         document.getElementById("quote").innerHTML = txt;
         document.getElementById("author").innerHTML = auth;
     }
 };
-xmlhttp.open("GET", "https://raw.githubusercontent.com/parthravrani/parthravrani.github.io/master/realityoflife/quote.json", true);
+xmlhttp.open("GET", "https://raw.githubusercontent.com/parthdeveloper007/theinkedwrites/gh-pages/top-quote.json", true);
 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xmlhttp.send("x=" + dbParam);
 }
