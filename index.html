@@ -88,10 +88,10 @@
 
     if (typeof PageName !== 'undefined') {
       if (PageName > 10 && PageName < 0) {
-        myFunction(0)
+        myFunctionPage(0)
       }
       else{
-        myFunction(PageName)
+        myFunctionPage(PageName)
       }
     }
 
@@ -145,7 +145,7 @@ xmlhttp.send("x=" + dbParam);
 }
 </script>
 <script>
-function myFunction(PageName) {
+function myFunctionPage(PageName) {
     var obj, random, dbParam, xmlhttp, myObj, x, txt = "";
 dbParam = JSON.stringify(0);
 xmlhttp = new XMLHttpRequest();
