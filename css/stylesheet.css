@@ -50,7 +50,7 @@
     line-height: 45px;
   }
   .author {
-    font-size: 13px;
+    font-size: 20px;
     line-height: 15px;
   }
   .button {
@@ -65,7 +65,7 @@
     line-height: 36px;
   }
   .author {
-    font-size: 10px;
+    font-size: 15px;
     line-height: 15px;
   }
   .button {
@@ -81,7 +81,7 @@
     line-height: 32px;
   }
   .author {
-    font-size: 8px;
+    font-size: 10px;
     line-height: 8px;
   }
   .button {
@@ -185,6 +185,7 @@ user-select: none;
     color: black;
     margin-top: 10px;
     text-align: center;
+    font-size: 12px;
 }
 .footer{ 
 -webkit-touch-callout: none;
