@@ -16,14 +16,14 @@ const RESOURCES = {
 "assets/assets/Montserrat-Regular.ttf": "a8a117360e71de94ae3b0b0f8d15b44d",
 "assets/FontManifest.json": "e15c6230317dd9b01e6205c6943faf49",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
-"assets/LICENSE": "89ccce1dfd2ea201733616a7ccfdd5da",
+"assets/LICENSE": "fdd0942e6a6d94ab6c3abe1c3294de81",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "67e0ee26dc6702c714bb76bf25952b90",
-"/": "67e0ee26dc6702c714bb76bf25952b90",
-"main.dart.js": "d733613540cb42b5fdb597b3222eb136",
+"index.html": "552f0de74763073b303e80ce52220282",
+"/": "552f0de74763073b303e80ce52220282",
+"main.dart.js": "70ab3472dca616973c5b1e46abbeacc9",
 "manifest.json": "e74e43bcce008b5bb9839efa90438858"
 };
 
